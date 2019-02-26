@@ -8,5 +8,5 @@ clear;      %Clear workspace variables
 
 clc;        %Clear command window
 
-x = simplify(dsolve('Dx + x = sin(t)', 'x(0)=-1'))
+x = expand(dsolve('Dx + x = sin(t)', 'x(0)=-1')) %Use dsolve to solve the IVP
 

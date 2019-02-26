@@ -8,4 +8,6 @@ clear;      %Clear workspace variables
 
 clc;        %Clear command window
 
-x = simplify(dsolve('D2x + 4*Dx = 17*cos(t)','Dx(0)=0',  'x(0)=-1'))
+x = expand(dsolve('D2x + 4*Dx = 17*cos(t)','Dx(0)=0',  'x(0)=-1'))  %Use dsolve to solve the IVP
+
+
