@@ -13,3 +13,9 @@ z1 = -3-j;  %Set the value of z1
 z2 = 2*j;   %Set the value of z2
 
 z = z1/z2   %Compute z1/z2 and print the result
+
+if (abs(z1/z2) == abs(z1)/abs(z2))  %Compute |z1/z2| and compare to |z1|/|z2|
+    disp('TRUE')                    %If equal, display TRUE
+else
+    disp('FALSE')                   %If not equal, display FALSE
+end

@@ -8,6 +8,6 @@ clear;      %Clear workspace variables
 
 clc;        %Clear command window
 
-syms t a b;
+syms t a b; %Declare t, a, b as symbols
 
-laplace(exp(-a*t-b))
+laplace(exp(-a*t-b))    %Compute the laplace transform of the function exp(-a*t-b)

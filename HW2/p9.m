@@ -8,10 +8,8 @@ clear;      %Clear workspace variables
 
 clc;        %Clear command window
 
-syms t
+syms t;     %Declare t as a symbol
 
-f = -heaviside(t)+2*heaviside(t-1)-heaviside(t-2);
+f = -heaviside(t)+2*heaviside(t-1)-heaviside(t-2);  %Create function from combined heaviside step functions
 
-%fplot(f,[-2,3])
-
-laplace(f)
+laplace(f)  %Compute the laplace transform of f
