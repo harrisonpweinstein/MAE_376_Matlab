@@ -1,0 +1,23 @@
+clear;
+clc;
+
+syms s;
+
+P = [s^2+s+2 -s-3; 2*s^2-s-2 s+3];
+u = [1;1];
+
+den = det(P);
+
+for n = 1:2
+    for m = 1:2
+        Pnm = P;
+        um = u;
+        um(m,:) = 0;
+        Pnm(:,n) = um;
+        num_i = det(Pnm);
+        s = tf('s');
+        G(n,m)= num_i/den       
+    end
+end
+
+sys = ss(G)
