@@ -3,22 +3,20 @@ clc;
 
 syms s;
 
-P = [s^2+s+2 -s-3; -s-2 2*s^2+s+3];
-u = [1 0;0 1];
+P = [s^2+s+2 -s-3; -(1/2)*s-1 s^2+(1/2)*s+(3/2)];
+u = [1 0;0 .5];
 
-den = det(P);
-s = tf('s');
+DEN = sym2poly(det(P));
+
 for n = 1:2
     for m = 1:2
         Pnm = P;
         Pnm(:,n) = u(:,m);
-        num_i = det(Pnm);
-
-        G(n,m)= num_i/den;       
+        NUM = sym2poly(det(Pnm));
+        s = tf('s');
+        G(n,m) = tf(NUM,DEN);       
     end
 end
 
+G(:,1)
 
-G
-
-%sys = ss(G)

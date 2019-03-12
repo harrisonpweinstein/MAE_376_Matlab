@@ -12,4 +12,6 @@ syms a;     %Declare a as a symbol
 
 A = [a 0 -1; 0 a+1 2; 1 0 a+2];  %Create A matrix
 
-simplify(inv(A))    %Compute the inverse of A
+simplify(det(A))    %Compute the determinant of A
+
+simplify(inv(A)*det(A)) %Compute the transpose of the adjunct of A
