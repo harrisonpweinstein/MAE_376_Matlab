@@ -18,5 +18,5 @@ for n = 1:2
     end
 end
 
-G(:,1)
-
+G
+sys_tf = ss(G);
