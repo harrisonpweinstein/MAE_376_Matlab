@@ -13,4 +13,4 @@ syms a;     %Declare a as a symbol
 
 A = [0 a; a 0];     %Create A matrix
 
-[V D] = jordan(A)
+[V D] = jordan(A)   %Compute the jordan of a and output V and D matrices

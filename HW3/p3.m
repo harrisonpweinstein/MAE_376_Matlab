@@ -16,4 +16,4 @@ b = [a; 4*a; 3*a+2];    %Create b vector
 
 x = inv(A)*b;   %Solve for x
 
-simplify(x)     %Simplify x and output the result
+x = simplify(x)     %Simplify x and output the result

@@ -12,4 +12,4 @@ syms s;     %Declare s as a symbol
 
 A = [s+1 1 -1;0 s+2 2;-1 2 s];  %Create A matrix
 
-simplify(det(A))      %Compute the determinant of A
+det_A = simplify(det(A))      %Compute the determinant of A

@@ -19,11 +19,11 @@ if D~=0         %Check if the determinant of is equal to 0
         Ai = A;             %Set Ai = A
         Ai(:,i) = b;        %Set i-th column of A to b      
         Di = det(Ai);       %Calculate the determinant of Ai and store in Di
-        x(i,1) = Di/D;        %Calculate xi and store in x
+        x(i,1) = Di/D;      %Calculate xi and store in x
     end
     
     x     %Display the solution
     
 else            %If D = 0
-    disp('Determinant of A is 0, A is singular,  therefore there are infinitely many solutions')     %Display the message
+    disp('Determinant of A is 0, A is singular, therefore there are infinitely many solutions')     %Display the message
 end
